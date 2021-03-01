@@ -1,5 +1,3 @@
-@import '~admin-lte/dist/css/adminlte.css';
-@import '~admin-lte/plugins/fontawesome-free/css/all.min.css';
 a.dropdown-item:hover {
     color: var(--text-color) !important;
     background-color: var(--surface-b) !important;
