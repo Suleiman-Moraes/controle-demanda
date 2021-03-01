@@ -1,0 +1,23 @@
+<nav class="navbar navbar-light font-padrao cards">
+    <a class="navbar-brand" href="#/pages">
+        <img src="assets/images/home-cafe.PNG" height="40" class="p-mr-2" loading="lazy">
+    </a>
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <a href="#" style="color: var(--text-color);" (click)="openCloseSideBar()"><i class="pi pi-bars"></i></a>
+        </li>
+    </ul>
+
+    <div class="my-2 my-lg-0">
+        <button pButton pRipple type="button" [icon]="isDark ? 'fa fa-circle-o' : 'fa fa-circle'"
+            (click)="changeTheme($event)" class="p-button-rounded p-button-text"></button>
+        &nbsp;
+        <a href="#" class="btn btn-outline-danger my-2 my-sm-0" type="button">Sair</a>
+    </div>
+</nav>
+
+<p-sidebar [(visible)]="visibleSidebar" [baseZIndex]="10000" [style]="{padding:'0'}"
+    styleClass="p-sidebar-sm p-shadow-11">
+    <app-side-bar></app-side-bar>
+
+</p-sidebar>

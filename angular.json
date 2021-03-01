@@ -49,9 +49,23 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeng-lts/resources/primeng.min.css",
+              "node_modules/primeflex/primeflex.css",
+              "node_modules/quill/dist/quill.core.css",
+              "node_modules/quill/dist/quill.snow.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/popper.js/dist/umd/popper.min.js",
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/chart.js/dist/Chart.js",
+              "node_modules/quill/dist/quill.js",
+              "node_modules/admin-lte/dist/js/adminlte.js",
+              "src/assets/js/script.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -144,6 +158,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "controle-demanda"
 }

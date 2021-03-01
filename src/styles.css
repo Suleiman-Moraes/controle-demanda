@@ -1,1 +1,300 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+    --blue: #1e90ff;
+    --white: #ffffff;
+    --sera: true;
+    --font-padrao: Euclid Circular B Light;
+  }
+  
+  body {
+    /*margin: 0; */
+    font-family: Arial, Helvetica, sans-serif;
+    color: #404c51;
+  }
+  
+  .p-paginator-bottom {
+    border-width: 1px 1px 1px 1px;
+  }
+  
+  a:hover, a:focus {
+    text-decoration: underline;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+      margin: 0 auto;
+    }
+  }
+  
+  p-button {
+    margin: 5px;
+  }
+  
+  @font-face {
+    font-family: Euclid Circular B;
+    src: url(assets/fonts/EuclidCircularB-Light.otf) format("opentype");
+  }
+  
+  @font-face {
+    font-family: Euclid Circular B Bold;
+    src: url(assets/fonts/EuclidCircularB-Bold.otf) format("opentype");
+  }
+  
+  button {
+    font-family: Euclid Circular B;
+  }
+  
+  input {
+    font-family: Euclid Circular B;
+  }
+  
+  .label-padrao {
+    color: var(--text-color);
+    font-family: Euclid Circular B;
+  }
+  
+  .font-padrao {
+    font-family: Euclid Circular B;
+  }
+  
+  .img-circle {
+    border-radius: 50%;
+  }
+  
+  .titleLabel {
+    font-size: 0.8rem;
+  }
+  
+  .container-dados {
+    margin: 1% 1% 1% 1%;
+    height: calc(100vh - 10px);
+    overflow-y: auto;
+  }
+  
+  .container-dados-sem-overflow {
+    margin: 1% 1% 1% 1%;
+    height: calc(100vh - 10px);
+  }
+  
+  .table-bootstrap-head {
+    color: var(--text-color);
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Euclid Circular B, 'Helvetica Neue', sans-serif;
+  }
+  
+  .table-bootstrap-body {
+    color: var(--text-color);
+    font-size: 14px;
+    font-family: Euclid Circular B, 'Helvetica Neue', sans-serif;
+  }
+  
+  :host ::ng-deep button {
+    margin-right: .25em;
+  }
+  
+  :host ::ng-deep .ui-toast-message-custom {
+    background-color: #E1CFE7;
+    color: #2c1e30;
+  }
+  
+  :host ::ng-deep .ui-toast-message-custom .ui-toast-close-icon {
+    color: #2c1e30;
+  }
+  
+  @media only screen and (max-width: 800px) {
+    /* Force table to not be like tables anymore */
+    #no-more-tables table, #no-more-tables thead, #no-more-tables tbody, #no-more-tables th, #no-more-tables td, #no-more-tables tr {
+      display: block;
+    }
+    /* Hide table headers (but not display: none;, for accessibility) */
+    #no-more-tables thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+    #no-more-tables tr {
+      border: 1px solid #ccc;
+    }
+    #no-more-tables td {
+      /* Behave  like a "row" */
+      border: none;
+      border-bottom: 1px solid #eee;
+      position: relative;
+      padding-left: 50%;
+      white-space: normal;
+      text-align: left;
+    }
+    #no-more-tables td:before {
+      /* Now like a table header */
+      position: absolute;
+      /* Top/left values mimic padding */
+      top: 6px;
+      left: 6px;
+      width: 45%;
+      padding-right: 10px;
+      white-space: nowrap;
+      text-align: left;
+      font-weight: bold;
+    }
+    /*
+      Label the data
+      */
+    #no-more-tables td:before {
+      content: attr(data-title);
+    }
+  }
+  
+  .cardbodyp {
+    background-color: var(--surface-b) !important;
+    font-family: var(--font-padrao);
+    color: var(--text-color);
+  }
+  
+  .p-card{
+    font-family: var(--font-padrao) !important;
+  }
+  
+  .cards {
+    background-color: var(--surface-e) !important;
+    font-family: var(--font-padrao);
+    color: var(--text-color);
+    border-color: var(--text-color-secondary);
+  }
+  
+  .card-header {
+    background-color: var(--surface-e);
+    border-color: var(--text-color-secondary);
+  }
+  
+  .card-footer {
+    border-color: var(--text-color-secondary);
+    background-color: var(--surface-e);
+  }
+  
+  .nav-tabs {
+    color: var(--text-color) !important;
+    font-family: var(--font-padrao);
+  }
+  
+  .nav-tabs .nav-link.active {
+    background-color: var(--surface-e) !important;
+    color: var(--text-color) !important;
+  }
+
+  .nav-link{
+    color: var(--text-color) !important;
+  }
+  
+  tr:hover {
+    color: var(--text-color) !important;
+    background-color: var(--surface-b);
+  }
+
+  hr{
+    background-color: var(--text-color-secondary);
+  }
+  
+  /* @media screen and (prefers-color-scheme: dark) {
+    :root {
+      --fundo-pagina: #2a323d;
+      --fundo-campo: #20262e;
+    }
+    body {
+      background: #2d3239;
+      color: #75715e;
+    }
+    h1 {
+      color: #e9d970;
+    }
+    div.card .card {
+      background-color: var(--fundo-pagina);
+      color: whitesmoke;
+    }
+    input {
+      background-color: var(--fundo-campo) !important;
+      color: whitesmoke !important;
+    }
+    textarea {
+      background-color: var(--fundo-campo) !important;
+    }
+    ::placeholder {
+      color: whitesmoke !important;
+      opacity: 1;
+    }
+    .p-dropdown {
+      background-color: var(--fundo-campo) !important;
+    }
+    .p-dropdown-panel {
+      background-color: var(--fundo-campo) !important;
+    }
+    .p-dropdown-header {
+      background-color: var(--fundo-campo) !important;
+    }
+    span.ng-star-inserted {
+      color: whitesmoke !important;
+    }
+    .p-dropdown-panel .p-dropdown-items .p-dropdown-item:not(.p-highlight):not(.p-disabled):hover {
+      background: #2d3239 !important;
+    }
+    li.p-dropdown-empty-message {
+      color: whitesmoke !important;
+    }
+    div.ng-trigger {
+      background-color: var(--fundo-campo) !important;
+    }
+    table.p-datepicker-calendar {
+      color: whitesmoke !important;
+    }
+    div.p-datepicker-header {
+      background-color: var(--fundo-campo) !important;
+    }
+    .p-datepicker:not(.p-disabled) table td span:not(.p-highlight):not(.p-disabled):hover {
+      background: #2d3239 !important;
+    }
+    .p-datepicker table td.p-datepicker-today>span {
+      background: #3f4042 !important;
+    }
+    table {
+      background-color: var(--fundo-pagina) !important;
+      color: whitesmoke !important;
+    }
+    .table-bootstrap-body {
+      color: whitesmoke;
+    }
+    tr:hover {
+      color: whitesmoke !important;
+    }
+    .table-bootstrap-head {
+      color: whitesmoke !important;
+    }
+    div.p-paginator.p-component {
+      background-color: var(--fundo-pagina) !important;
+      border-color: var(--fundo-pagina) !important;
+    }
+    .navbar-light {
+      background-color: var(--fundo-pagina) !important;
+    }
+    a {
+      color: whitesmoke !important;
+      background-color: var(--fundo-pagina) !important;
+    }
+    a:hover {
+      background-color: var(--fundo-campo) !important;
+    }
+    .dropdown-menu {
+      background-color: var(--fundo-pagina) !important;
+    }
+    .nav-tabs .nav-link {
+      border-color: #dee2e6 #dee2e6 #fff;
+    }
+    .nav-tabs .nav-link.active {
+      background-color: var(--fundo-campo) !important;
+    } 
+  }*/

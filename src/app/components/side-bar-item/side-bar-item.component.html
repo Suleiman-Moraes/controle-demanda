@@ -1,0 +1,32 @@
+<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu">
+    <li class="nav-item" *ngIf="!item.itens">
+        <a [href]="item.url" class="nav-link">
+            <i [class]="'nav-icon ' + item.icon"></i>
+            <p>
+                {{ item.nome }}
+                <!-- <span class="right badge badge-danger">New</span> -->
+            </p>
+        </a>
+    </li>
+    <li class="nav-item has-treeview" *ngIf="item.itens">
+        <a href="#" class="nav-link">
+            <i [class]="'nav-icon ' + item.icon"></i>
+            <p style="font-size: 17px;">
+                <strong>{{ item.nome }}</strong>
+                <i class="right fas fa-angle-left"></i>
+            </p>
+        </a>
+        <ul class="nav nav-treeview">
+            <li class="nav-item" style="border-top: 0;" *ngFor="let filho of itenSemFilhos">
+                <a [href]="filho.url" class="nav-link">
+                    <i [class]="'nav-icon ' + filho.icon"></i>
+                    <p>
+                        {{ filho.nome }}
+                    </p>
+                </a>
+            </li>
+        </ul>
+    </li>
+</ul>
+<app-side-bar-item *ngFor=" let ifilho of itemComFilhos" [item]="ifilho">
+</app-side-bar-item>
