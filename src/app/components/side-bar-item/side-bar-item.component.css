@@ -1,23 +1,38 @@
-a.dropdown-item:hover {
-    color: var(--text-color) !important;
-    background-color: var(--surface-b) !important;
-}
-
-a:hover {
-    background-color: var(--surface-b) !important;
-}
-
-div.p-sidebar-active {
-    padding: 0 !important;
-    /* background-color: linear-gradient(var(--surface-a), var(--surface-e)); */
-}
-
-div.sidebar {
-    background-color: var(--surface-d) !important;
-    font-family: var(--font-padrao);
+h2 {
+    background-color: var(--surface-d);
     color: var(--text-color);
+    font-family: var(--font-padrao);
+    font-size: 17px;
+    cursor: pointer;
+    margin-top: 8px;
 }
 
-.nav-item{
-    border-top: solid 1px var(--text-color-secondary);
+div.card {
+    margin-bottom: 1px;
+    background-color: var(--surface-b);
+}
+
+div.card-header {
+    background-color: var(--surface-d);
+    position: relative;
+    padding: 7px;
+}
+
+div.card-body {
+    background-color: var(--surface-b);
+    cursor: pointer;
+    position: relative;
+    padding: 5px;
+}
+
+div.card-body:hover {
+    background-color: var(--surface-a);
+    color: var(--text-color-secondary);
+    text-decoration: underline;
+}
+
+h6 {
+    color: var(--text-color);
+    font-family: var(--font-padrao);
+    font-size: 15px;
 }

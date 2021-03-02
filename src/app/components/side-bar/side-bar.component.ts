@@ -48,21 +48,21 @@ export class SideBarComponent implements OnInit {
           id: 2,
           nome: 'Cadastro Filho',
           icon: 'pi pi-pencil',
-          menuPai: 1,
-          itens: [
-            {
-              nome: 'Agência Filho',
-              icon: 'pi pi-user-edit',
-              url: '#/pages/agencia'
-            }
-          ]
+          menuPai: 1
         }
       ]
     },
     {
       nome: 'Solo',
       icon: 'pi pi-user-edit',
-      url: '#/pages/associado'
+      url: '#/pages/associado',
+      itens: [
+        {
+          nome: 'Agência Filho',
+          icon: 'pi pi-user-edit',
+          url: '#/pages/agencia'
+        }
+      ]
     }
   ];
 

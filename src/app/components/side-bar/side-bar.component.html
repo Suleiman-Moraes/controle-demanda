@@ -1,15 +1,7 @@
-<div align="center">
+<div align="center" style="background-color: var(--surface-b);">
     <a class="navbar-brand" href="#/pages">
         <img src="assets/images/home-cafe.PNG" width="150" class="p-mr-2" loading="lazy">
     </a>
 </div>
-<!-- Sidebar -->
-<div class="sidebar">
-    <!-- Sidebar Menu -->
-    <nav class="mt-2">
-        <app-side-bar-item *ngFor=" let item of menus" [item]="item">
-        </app-side-bar-item>
-    </nav>
-    <!-- /.sidebar-menu -->
-</div>
-<!-- /.sidebar -->
+<app-side-bar-item [menus]="menus">
+</app-side-bar-item>

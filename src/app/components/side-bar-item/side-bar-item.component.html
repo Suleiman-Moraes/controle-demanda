@@ -1,10 +1,10 @@
-<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu">
+<!-- <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu">
     <li class="nav-item" *ngIf="!item.itens">
         <a [href]="item.url" class="nav-link">
             <i [class]="'nav-icon ' + item.icon"></i>
             <p>
                 {{ item.nome }}
-                <!-- <span class="right badge badge-danger">New</span> -->
+                <span class="right badge badge-danger">New</span>
             </p>
         </a>
     </li>
@@ -27,6 +27,73 @@
             </li>
         </ul>
     </li>
-</ul>
+</ul> -->
+
+<div class="row" style="background-color: var(--surface-b);">
+    <div class="col-md-12">
+        <div class="row mt-2">
+            <div class="col-md-12">
+                <h6 class="text-muted" align="center">Menu</h6>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="accordion" id="accordionExample">
+    <div class="card" *ngFor="let item of menus; let i = index">
+        <div class="card-header" id="headingOne">
+            <h2 class="mb-0" data-toggle="collapse" [attr.data-target]="'#collapse' + i" (click)="clickExpand(i)"
+                [id]="'h2collapse' + i">
+                <strong>{{ item.nome }}</strong>
+                <span data-toggle="collapse" [attr.data-target]="'#collapse' + i"
+                    [class]="'pi ' + (ariaExpanded[i] ? 'pi-chevron-up' : 'pi-chevron-down')"
+                    style="float: right;"></span>
+            </h2>
+        </div>
+
+        <div [id]="'collapse' + i" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body" *ngFor="let filho of item.itens">
+                <h6>
+                    <i [class]="filho.icon"></i> {{ filho.nome }}
+                </h6>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- <p-accordion>
+    <p-accordionTab>
+        <ng-template pTemplate="header">
+            <div align="right">
+                <i class="pi pi-pencil"></i>
+                <div class="accordion-header-s">
+                    &nbsp;&nbsp;Cadastro
+                </div>
+            </div>
+        </ng-template>
+        <ng-template pTemplate="content">
+            <a href="#" class="accordion-body-s"><i class="pi pi-user-edit"></i> Lik da Página</a>
+        </ng-template>
+    </p-accordionTab>
+    <p-accordionTab header="Header 2">
+        Content 2
+    </p-accordionTab>
+    <p-accordionTab header="Header 3">
+        Content 3
+    </p-accordionTab>
+</p-accordion> -->
+<!-- <div class="row">
+    <div class="col-md-12">
+        <ul class="nav">
+            <li class="nav-item" style="border-top: 0;" *ngFor="let filho of itenSemFilhos">
+                <a [href]="'#'" class="nav-link" style="width: 100%;">
+                    <i class="pi pi-user-edit"> Solo</i>
+                    Solo
+                </a>
+            </li>
+        </ul>
+    </div>
+</div> -->
 <app-side-bar-item *ngFor=" let ifilho of itemComFilhos" [item]="ifilho">
 </app-side-bar-item>

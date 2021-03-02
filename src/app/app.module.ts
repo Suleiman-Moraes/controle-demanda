@@ -18,6 +18,9 @@ import { SidebarModule } from 'primeng-lts/sidebar';
 import { SlideMenuModule } from 'primeng-lts/slidemenu';
 import { MegaMenuModule } from 'primeng-lts/megamenu';
 import { SideBarItemComponent } from './components/side-bar-item/side-bar-item.component';
+import { AccordionModule } from 'primeng-lts/accordion';
+
+
 
 @NgModule({
   declarations: [
@@ -39,7 +42,8 @@ import { SideBarItemComponent } from './components/side-bar-item/side-bar-item.c
     ButtonModule,
     SidebarModule,
     SlideMenuModule,
-    MegaMenuModule
+    MegaMenuModule,
+    AccordionModule
   ],
   providers: [
     ConfirmationService,
