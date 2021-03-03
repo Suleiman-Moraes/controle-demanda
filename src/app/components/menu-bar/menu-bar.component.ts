@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuBarComponent implements OnInit {
   public static showTemplate: boolean = true;
-  visibleSidebar = true;
+  visibleSidebar = false;
 
   private themeDark: string = 'assets/css/themes/dark/theme.css';
   private themeLight: string = 'assets/css/themes/light/theme.css';

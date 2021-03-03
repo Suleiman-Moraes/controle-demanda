@@ -1,0 +1,28 @@
+<p-panel [toggleable]="true" [collapsed]="false">
+    <p-header>
+        <div align="left" style="color: var(--primary-color);">
+            <h6>
+                <strong><i class="pi pi-folder-open"></i> Histórico de Encaminhamentos</strong>
+            </h6>
+        </div>
+    </p-header>
+
+    <section id="no-more-tables">
+        <p-table [columns]="cols" [value]="products" styleClass="p-datatable-striped" [rowHover]="true">
+            <ng-template pTemplate="header" let-columns>
+                <tr class="table-bootstrap-head">
+                    <th *ngFor="let col of columns">
+                        {{ col.header }}
+                    </th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-rowData let-columns="columns">
+                <tr class="table-bootstrap-body">
+                    <td *ngFor="let col of columns" [attr.data-title]="col.header">
+                        {{ rowData[col.field] }}
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </section>
+</p-panel>

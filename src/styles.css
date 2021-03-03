@@ -1,208 +1,211 @@
 /* You can add global styles to this file, and also import other style files */
+
 /* @import '~admin-lte/dist/css/adminlte.css'; */
+
 /* @import '~admin-lte/plugins/fontawesome-free/css/all.min.css'; */
+
 :root {
-    --blue: #1e90ff;
-    --white: #ffffff;
-    --sera: true;
-    --font-padrao: Euclid Circular B;
+  --blue: #1e90ff;
+  --white: #ffffff;
+  --sera: true;
+  --font-padrao: Euclid Circular B;
+}
+
+body {
+  /*margin: 0; */
+  font-family: Arial, Helvetica, sans-serif;
+  color: #404c51;
+}
+
+.p-paginator-bottom {
+  border-width: 1px 1px 1px 1px;
+}
+
+a:hover, a:focus {
+  text-decoration: underline;
+}
+
+label {
+  font-weight: bold;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+    margin: 0 auto;
   }
-  
-  body {
-    /*margin: 0; */
-    font-family: Arial, Helvetica, sans-serif;
-    color: #404c51;
+}
+
+p-button {
+  margin: 5px;
+}
+
+@font-face {
+  font-family: Euclid Circular B;
+  src: url(assets/fonts/EuclidCircularB-Light.otf) format("opentype");
+}
+
+@font-face {
+  font-family: Euclid Circular B Bold;
+  src: url(assets/fonts/EuclidCircularB-Bold.otf) format("opentype");
+}
+
+button {
+  font-family: var(--font-padrao);
+}
+
+input {
+  font-family: var(--font-padrao);
+}
+
+.label-padrao {
+  color: var(--text-color);
+  font-family: var(--font-padrao);
+}
+
+.font-padrao {
+  font-family: var(--font-padrao);
+}
+
+.img-circle {
+  border-radius: 50%;
+}
+
+.titleLabel {
+  font-size: 0.8rem;
+}
+
+.container-dados {
+  margin: 1% 1% 1% 1%;
+  height: calc(100vh - 10px);
+  overflow-y: auto;
+}
+
+.container-dados-sem-overflow {
+  margin: 1% 1% 1% 1%;
+  height: calc(100vh - 10px);
+}
+
+.table-bootstrap-head {
+  color: var(--text-color);
+  font-size: 14px;
+  font-weight: bold;
+  font-family: var(--font-padrao), 'Helvetica Neue', sans-serif;
+}
+
+.table-bootstrap-body {
+  color: var(--text-color);
+  font-size: 14px;
+  font-family: var(--font-padrao), 'Helvetica Neue', sans-serif;
+}
+
+:host ::ng-deep button {
+  margin-right: .25em;
+}
+
+:host ::ng-deep .ui-toast-message-custom {
+  background-color: #E1CFE7;
+  color: #2c1e30;
+}
+
+:host ::ng-deep .ui-toast-message-custom .ui-toast-close-icon {
+  color: #2c1e30;
+}
+
+@media only screen and (max-width: 800px) {
+  /* Force table to not be like tables anymore */
+  #no-more-tables table, #no-more-tables thead, #no-more-tables tbody, #no-more-tables th, #no-more-tables td, #no-more-tables tr {
+    display: block;
   }
-  
-  .p-paginator-bottom {
-    border-width: 1px 1px 1px 1px;
+  /* Hide table headers (but not display: none;, for accessibility) */
+  #no-more-tables thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
   }
-  
-  a:hover, a:focus {
-    text-decoration: underline;
+  #no-more-tables tr {
+    border: 1px solid #ccc;
   }
-  
-  label {
+  #no-more-tables td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    white-space: normal;
+    text-align: left;
+  }
+  #no-more-tables td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    text-align: left;
     font-weight: bold;
   }
-  
-  @media (min-width: 1200px) {
-    .container {
-      width: 1170px;
-      margin: 0 auto;
-    }
-  }
-  
-  p-button {
-    margin: 5px;
-  }
-  
-  @font-face {
-    font-family: Euclid Circular B;
-    src: url(assets/fonts/EuclidCircularB-Light.otf) format("opentype");
-  }
-  
-  @font-face {
-    font-family: Euclid Circular B Bold;
-    src: url(assets/fonts/EuclidCircularB-Bold.otf) format("opentype");
-  }
-  
-  button {
-    font-family: var(--font-padrao);
-  }
-  
-  input {
-    font-family: var(--font-padrao);
-  }
-  
-  .label-padrao {
-    color: var(--text-color);
-    font-family: var(--font-padrao);
-  }
-  
-  .font-padrao {
-    font-family: var(--font-padrao);
-  }
-  
-  .img-circle {
-    border-radius: 50%;
-  }
-  
-  .titleLabel {
-    font-size: 0.8rem;
-  }
-  
-  .container-dados {
-    margin: 1% 1% 1% 1%;
-    height: calc(100vh - 10px);
-    overflow-y: auto;
-  }
-  
-  .container-dados-sem-overflow {
-    margin: 1% 1% 1% 1%;
-    height: calc(100vh - 10px);
-  }
-  
-  .table-bootstrap-head {
-    color: var(--text-color);
-    font-size: 12px;
-    font-weight: bold;
-    font-family: var(--font-padrao), 'Helvetica Neue', sans-serif;
-  }
-  
-  .table-bootstrap-body {
-    color: var(--text-color);
-    font-size: 14px;
-    font-family: var(--font-padrao), 'Helvetica Neue', sans-serif;
-  }
-  
-  :host ::ng-deep button {
-    margin-right: .25em;
-  }
-  
-  :host ::ng-deep .ui-toast-message-custom {
-    background-color: #E1CFE7;
-    color: #2c1e30;
-  }
-  
-  :host ::ng-deep .ui-toast-message-custom .ui-toast-close-icon {
-    color: #2c1e30;
-  }
-  
-  @media only screen and (max-width: 800px) {
-    /* Force table to not be like tables anymore */
-    #no-more-tables table, #no-more-tables thead, #no-more-tables tbody, #no-more-tables th, #no-more-tables td, #no-more-tables tr {
-      display: block;
-    }
-    /* Hide table headers (but not display: none;, for accessibility) */
-    #no-more-tables thead tr {
-      position: absolute;
-      top: -9999px;
-      left: -9999px;
-    }
-    #no-more-tables tr {
-      border: 1px solid #ccc;
-    }
-    #no-more-tables td {
-      /* Behave  like a "row" */
-      border: none;
-      border-bottom: 1px solid #eee;
-      position: relative;
-      padding-left: 50%;
-      white-space: normal;
-      text-align: left;
-    }
-    #no-more-tables td:before {
-      /* Now like a table header */
-      position: absolute;
-      /* Top/left values mimic padding */
-      top: 6px;
-      left: 6px;
-      width: 45%;
-      padding-right: 10px;
-      white-space: nowrap;
-      text-align: left;
-      font-weight: bold;
-    }
-    /*
+  /*
       Label the data
       */
-    #no-more-tables td:before {
-      content: attr(data-title);
-    }
+  #no-more-tables td:before {
+    content: attr(data-title);
   }
-  
-  .cardbodyp {
-    background-color: var(--surface-b) !important;
-    font-family: var(--font-padrao);
-    color: var(--text-color);
-  }
-  
-  .p-card{
-    font-family: var(--font-padrao) !important;
-  }
-  
-  .cards {
-    background-color: var(--surface-e) !important;
-    font-family: var(--font-padrao);
-    color: var(--text-color);
-    border-color: var(--text-color-secondary);
-  }
-  
-  .card-header {
-    background-color: var(--surface-e);
-    border-color: var(--text-color-secondary);
-  }
-  
-  .card-footer {
-    border-color: var(--text-color-secondary);
-    background-color: var(--surface-e);
-  }
-  
-  .nav-tabs {
-    color: var(--text-color) !important;
-    font-family: var(--font-padrao);
-  }
-  
-  .nav-tabs .nav-link.active {
-    background-color: var(--surface-e) !important;
-    color: var(--text-color) !important;
-  }
+}
 
-  .nav-link{
-    color: var(--text-color) !important;
-  }
-  
-  tr:hover {
-    color: var(--text-color) !important;
-    background-color: var(--surface-b);
-  }
+.cardbodyp {
+  background-color: var(--surface-b) !important;
+  font-family: var(--font-padrao);
+  color: var(--text-color);
+}
 
-  hr{
-    background-color: var(--text-color-secondary);
-  }
-  
-  /* @media screen and (prefers-color-scheme: dark) {
+.p-card {
+  font-family: var(--font-padrao) !important;
+}
+
+.cards {
+  background-color: var(--surface-e) !important;
+  font-family: var(--font-padrao);
+  color: var(--text-color);
+  border-color: var(--text-color-secondary);
+}
+
+.card-header {
+  background-color: var(--surface-e);
+  border-color: var(--text-color-secondary);
+}
+
+.card-footer {
+  border-color: var(--text-color-secondary);
+  background-color: var(--surface-e);
+}
+
+.nav-tabs {
+  color: var(--text-color) !important;
+  font-family: var(--font-padrao);
+}
+
+.nav-tabs .nav-link.active {
+  background-color: var(--surface-e) !important;
+  color: var(--text-color) !important;
+}
+
+.nav-link {
+  color: var(--text-color) !important;
+}
+
+tr:hover {
+  color: var(--text-color) !important;
+  background-color: var(--surface-b);
+}
+
+hr {
+  background-color: var(--text-color-secondary);
+}
+
+/* @media screen and (prefers-color-scheme: dark) {
     :root {
       --fundo-pagina: #2a323d;
       --fundo-campo: #20262e;

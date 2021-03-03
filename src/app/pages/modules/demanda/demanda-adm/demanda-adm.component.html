@@ -1,0 +1,65 @@
+<app-demanda-informacao></app-demanda-informacao>
+<app-demanda-historico-encaminhamento></app-demanda-historico-encaminhamento>
+<p-panel [toggleable]="true">
+    <p-header>
+        <div align="left" style="color: var(--primary-color);">
+            <h6>
+                <strong><i class="pi pi-cog"></i> Ações</strong>
+            </h6>
+        </div>
+    </p-header>
+    <div class="form-row">
+        <div class="form-group col-md-3">
+            <div align="center">
+                <button pButton pRipple type="button" icon="pi pi-eject" label="Encaminhar para"
+                    class="p-button-secondary"></button>
+            </div>
+        </div>
+        <div class="form-group col-md-3">
+            <div align="center">
+                <button pButton pRipple type="button" icon="pi pi-id-card" label="Assumir"
+                    class="p-button-warning"></button>
+            </div>
+        </div>
+        <div class="form-group col-md-3">
+            <div align="center">
+                <button pButton pRipple type="button" icon="pi pi-pencil" label="Editar" class="p-button-help"></button>
+            </div>
+        </div>
+        <div class="form-group col-md-3">
+            <div align="center">
+                <button pButton pRipple type="button" icon="pi pi-times" label="Cancelar"
+                    class="p-button-danger"></button>
+            </div>
+        </div>
+    </div>
+</p-panel>
+<p-panel [toggleable]="true">
+    <p-header>
+        <div align="left" style="color: var(--primary-color);">
+            <h6>
+                <strong><i class="pi pi-cog"></i> Ações apenas para o administrador</strong>
+            </h6>
+        </div>
+    </p-header>
+    <div class="form-row">
+        <div class="form-group col-md-3">
+            <strong>Bloquear encaminhamentos:</strong>
+        </div>
+        <div class="form-group col-md-3">
+            <div align="center">
+                <p-toggleButton [(ngModel)]="checked1" onLabel="Liberado" offLabel="Bloqueado" onIcon="pi pi-check"
+                    offIcon="pi pi-times" [style]="{'width': '10em'}" styleClass="p-button-danger"></p-toggleButton>
+            </div>
+        </div>
+        <div class="form-group col-md-3">
+            <strong>Bloquear assumir:</strong>
+        </div>
+        <div class="form-group col-md-3">
+            <div align="center">
+                <p-toggleButton [(ngModel)]="checked2" onLabel="Liberado" offLabel="Bloqueado" onIcon="pi pi-check"
+                    offIcon="pi pi-times" [style]="{'width': '10em'}" styleClass="p-button-danger"></p-toggleButton>
+            </div>
+        </div>
+    </div>
+</p-panel>
