@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { rejects } from 'assert';
+import { MenuSideService } from 'src/app/shared/services/menu-side.service';
 declare const $: any;
 var iSelecionado = -1;
 
@@ -17,23 +19,19 @@ export class SideBarItemComponent implements OnInit {
   itemComFilhos: any[] = [];
   itenSemFilhos: any[];
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private menuSideService: MenuSideService
+  ) { }
 
   ngOnInit(): void {
     for (let i = 0; i < this.menus.length; i++) {
       this.ariaExpanded.push(false);
     }
-    // if(this.item.itens){
-    //   this.itenSemFilhos = this.item.itens.filter(i =>{
-    //     if(i.itens){
-    //       this.itemComFilhos.push(i);
-    //       return false;
-    //     }
-    //     else{
-    //       return true;
-    //     }
-    //   });
-    // }
+  }
+
+  navegar(url: string, event?: Event): void{
+    this.router.navigate([url.replace('#', '')]);
   }
 
   clickExpand(i): void {

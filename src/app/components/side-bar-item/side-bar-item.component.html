@@ -52,7 +52,7 @@
         </div>
 
         <div [id]="'collapse' + i" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-            <div class="card-body" *ngFor="let filho of item.itens">
+            <div class="card-body" *ngFor="let filho of item.itens" (click)="navegar(filho.url)">
                 <h6>
                     <i [class]="filho.icon"></i> {{ filho.nome }}
                 </h6>

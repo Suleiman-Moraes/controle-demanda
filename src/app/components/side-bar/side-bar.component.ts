@@ -53,14 +53,14 @@ export class SideBarComponent implements OnInit {
       ]
     },
     {
-      nome: 'Solo',
+      nome: 'Controle de Demandas',
       icon: 'pi pi-user-edit',
       url: '#/pages/associado',
       itens: [
         {
-          nome: 'Agência Filho',
+          nome: 'Administrar Demandas',
           icon: 'pi pi-user-edit',
-          url: '#/pages/agencia'
+          url: '#/pages/demanda/adm/1'
         }
       ]
     }
