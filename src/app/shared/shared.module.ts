@@ -9,11 +9,16 @@ import { PanelModule } from 'primeng-lts/panel';
 import { TableModule } from 'primeng-lts/table';
 import { ButtonModule } from 'primeng-lts/button';
 import { ToggleButtonModule } from 'primeng-lts/togglebutton';
+import { ChartModule } from 'primeng-lts/chart';
+import { ComboComponent } from './components/combo/combo.component';
+import { DropdownModule } from 'primeng-lts/dropdown';
 
 registerLocaleData(localePt, 'pt');
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    ComboComponent
+  ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
@@ -23,7 +28,9 @@ registerLocaleData(localePt, 'pt');
     PanelModule,
     TableModule,
     ButtonModule,
-    ToggleButtonModule
+    ToggleButtonModule,
+    ChartModule,
+    DropdownModule
   ],
   exports: [
     CommonModule,
@@ -34,7 +41,12 @@ registerLocaleData(localePt, 'pt');
     PanelModule,
     TableModule,
     ButtonModule,
-    ToggleButtonModule
+    ToggleButtonModule,
+    ChartModule,
+    DropdownModule,
+
+    //Components
+    ComboComponent
   ],
   providers: [
     MessageService,

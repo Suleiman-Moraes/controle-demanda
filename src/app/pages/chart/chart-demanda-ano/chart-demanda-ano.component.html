@@ -1,0 +1,70 @@
+<p-panel [toggleable]="true">
+    <p-header>
+        <div align="left" style="color: var(--primary-color);">
+            <h6>
+                <strong><i class="fa fa-bar-chart"></i> Demandas por ano</strong>
+            </h6>
+        </div>
+    </p-header>
+    <div class="form-row">
+        <div class="form-group col-md-8">
+            <p-chart type="bar" height="300px" [data]="dataBarra"></p-chart>
+        </div>
+        <div class="form-group col-md-4">
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <app-combo for-name="barra" nome="Selecione" [formulario]="formulario" [options]="anos" text="text"
+                        value="text"></app-combo>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-8">
+                    <strong>Média Abertas:</strong>
+                </div>
+                <div class="form-group col-md-4">
+                    17,83
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-8">
+                    <strong>Média Resolvidas:</strong>
+                </div>
+                <div class="form-group col-md-4">
+                    23
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-8">
+                    <strong>Média Canceladas:</strong>
+                </div>
+                <div class="form-group col-md-4">
+                    26
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-8">
+                    <strong>Total Abertas:</strong>
+                </div>
+                <div class="form-group col-md-4">
+                    214
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-8">
+                    <strong>Total Resolvidas:</strong>
+                </div>
+                <div class="form-group col-md-4">
+                    276
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-8">
+                    <strong>Total Canceladas:</strong>
+                </div>
+                <div class="form-group col-md-4">
+                    312
+                </div>
+            </div>
+        </div>
+    </div>
+</p-panel>

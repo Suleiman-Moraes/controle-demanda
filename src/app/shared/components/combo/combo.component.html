@@ -1,0 +1,6 @@
+<form [formGroup]="formulario">
+    <p-dropdown [options]="itens" [placeholder]="nome" [showClear]="true" filter="true"
+        emptyFilterMessage="Nenhum registro encontrado" [id]="forName" [formControlName]="forName" [disabled]="disabled"
+        [style]="{'width':'100%'}" (onChange)="selectionChange($event)">
+    </p-dropdown>
+</form>

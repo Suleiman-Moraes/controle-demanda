@@ -1,0 +1,46 @@
+<p-panel [toggleable]="true">
+    <p-header>
+        <div align="left" style="color: var(--primary-color);">
+            <h6>
+                <strong><i class="fa fa-pie-chart"></i> Demandas por mês</strong>
+            </h6>
+        </div>
+    </p-header>
+    <div class="form-row">
+        <div class="form-group col-md-8">
+            <p-chart type="pie" [data]="data" height="300px" [options]="options"></p-chart>
+        </div>
+        <div class="form-group col-md-4">
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <app-combo for-name="barra" nome="Selecione" [formulario]="formulario" [options]="anos" text="text"
+                        value="text"></app-combo>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <strong>Descrição:</strong>
+                </div>
+                <div class="form-group col-md-8">
+                    Demandas abertas no mês por tipo
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-8">
+                    <strong>Média:</strong>
+                </div>
+                <div class="form-group col-md-4">
+                    7,4
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-8">
+                    <strong>Total:</strong>
+                </div>
+                <div class="form-group col-md-4">
+                    37
+                </div>
+            </div>
+        </div>
+    </div>
+</p-panel>

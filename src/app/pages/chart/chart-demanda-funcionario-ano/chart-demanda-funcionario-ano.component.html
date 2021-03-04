@@ -1,0 +1,46 @@
+<p-panel [toggleable]="true">
+    <p-header>
+        <div align="left" style="color: var(--primary-color);">
+            <h6>
+                <strong><i class="fa fa-line-chart"></i> Demandas por usuários / mês</strong>
+            </h6>
+        </div>
+    </p-header>
+    <div class="form-row">
+        <div class="form-group col-md-8">
+            <p-chart type="line" [data]="data"></p-chart>
+        </div>
+        <div class="form-group col-md-4">
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <app-combo for-name="barra" nome="Selecione" [formulario]="formulario" [options]="anos" text="text"
+                        value="text"></app-combo>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <strong>Descrição:</strong>
+                </div>
+                <div class="form-group col-md-8">
+                    Demandas atendidas no mês por usuários
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-8">
+                    <strong>Média:</strong>
+                </div>
+                <div class="form-group col-md-4">
+                    267,3
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-8">
+                    <strong>Total:</strong>
+                </div>
+                <div class="form-group col-md-4">
+                    802
+                </div>
+            </div>
+        </div>
+    </div>
+</p-panel>

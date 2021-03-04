@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-chart-demanda-ano',
+  templateUrl: './chart-demanda-ano.component.html',
+  styleUrls: ['./chart-demanda-ano.component.css']
 })
-export class HomeComponent implements OnInit {
+export class ChartDemandaAnoComponent implements OnInit {
 
   formulario: FormGroup;
   dataBarra;
